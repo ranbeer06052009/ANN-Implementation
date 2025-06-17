@@ -27,7 +27,6 @@ gender = st.selectbox('Gender', label_encoder_gender.classes_)
 age = st.slider('Age', 18, 92)
 balance = st.number_input('Balance')
 credit_score = st.number_input('Credit Score')
-exited = st.selectbox('Exited', [0,1])
 tenure = st.slider('Tenure', 0, 10)
 num_of_products = st.slider('Number of Products', 1, 4)
 has_cr_card = st.selectbox('Has Credit Card', [0, 1])
@@ -43,7 +42,6 @@ input_data = pd.DataFrame({
     'NumOfProducts': [num_of_products],
     'HasCrCard': [has_cr_card],
     'IsActiveMember': [is_active_member],
-    'Exited': [exited]
 })
 
 # One-hot encode 'Geography'
